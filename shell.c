@@ -105,7 +105,6 @@ int lsh_launch(char **args)
   } else {
     // Parent process
     do {
-        sleep(100);
         wpid = waitpid(pid, &status, WUNTRACED);
     } while (!WIFEXITED(status) && !WIFSIGNALED(status));
   }
